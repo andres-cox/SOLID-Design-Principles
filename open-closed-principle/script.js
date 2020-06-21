@@ -1,9 +1,14 @@
 // OPEN/CLOSED PRINCIPLE
+// "Objects or entities should be open for extension, but closed for modification"
+
+// Open for extension means that we should be able to add new features or components to the application without breaking existing code.
+
+// Closed for modification means that we should not introduce breaking changes to existing functionality, because that would force you to refactor a lot of existing code
 
 // This is the common code
 // When we need a new object we need to upgrade the function
-// This is usually when there are multiple switch cases
-// This is not usefull  if we have the same method for similar objects
+// This is usual when there are multiple switch cases
+// In this case we need to refactor the function in order to make an upgrade. This my lead to problems even we have functional code.
 const shapesWithoutClass = [
     {
         shape: 'triangle',
@@ -41,7 +46,6 @@ function getShapesAreaWithoutClass(shapes) {
             case 'triangle':
                 console.log((shape.base * shape.height) / 2);
                 break;
-
             default:
                 break;
         }
